@@ -39,10 +39,17 @@ $ ./ola_usuario_1
 $ Digite o seu nome: Eu Mesmo
 ```
 
+```bash
+Saida : Ola Eu mesmo
+```
 (b) Se o usuário insere mais de um nome entre aspas duplas. Por exemplo:
 ```bash
 $ ./ola_usuario_1
 $ Digite o seu nome: "Eu Mesmo"
+```
+
+```bash
+Saida : Ola "Eu mesmo"
 ```
 
 (c) Se é usado um pipe. Por exemplo:
@@ -50,20 +57,34 @@ $ Digite o seu nome: "Eu Mesmo"
 $ echo Eu | ./ola_usuario_1
 ```
 
+```bash
+Saida : Digite o seu nome: Ola Eu
+```
+
 (d) Se é usado um pipe com mais de um nome. Por exemplo:
 ```bash
 $ echo Eu Mesmo | ./ola_usuario_1
+```
+```bash
+Saida : Digite o seu nome: Ola Eu Mesmo
 ```
 
 (e) Se é usado um pipe com mais de um nome entre aspas duplas. Por exemplo:
 ```bash
 $ echo "Eu Mesmo" | ./ola_usuario_1
 ```
+```bash
+Saida : Digite o seu nome: Ola Eu Mesmo
+```
 
 (f) Se é usado o redirecionamento de arquivo. Por exemplo:
 ```bash
 $ echo Ola mundo cruel! > ola.txt
 $ ./ola_usuario_1 < ola.txt
+```
+
+```bash
+Saida : Digite o seu nome: Ola Ola mundo cruel!
 ```
 
 4. Crie um código em C que recebe o nome do usuário como um argumento de entrada (usando as variáveis argc e \*argv[]), e imprime no terminal "Ola " e o nome do usuário. Por exemplo, considerando que o código criado recebeu o nome de 'ola_usuario_2':

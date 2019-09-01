@@ -3,7 +3,7 @@
 Para fazer um executável usar chmod +x fileName
 
 
-```{bash}
+```bash
 #!/bin/bash
 for i in {1..10}
 do
@@ -13,7 +13,7 @@ done
 
 2. Faça um script chamado _cals.sh_ que apresente o calendário de vários meses indicados pelo usuário, usando o seguinte formato:
 
-```{bash}
+```bash
 #!/bin/bash
 echo $# argumentos passados
 if [ $# -ge 1 ]; then
@@ -31,7 +31,7 @@ fi
 
 3. Utilizando a lógica do script anterior, descubra em que dia da semana caiu o seu aniversário nos últimos dez anos.
 
-```{bash}
+```bash
 #!/bin/bash
 echo "Digite o mes do seu aniversário:"
 read mes
@@ -56,7 +56,7 @@ https://github.com/DiogoCaetanoGarcia/Sistemas_Embarcados/raw/master/Aulas/01_Si
 
 Estes são links para slides de 3 aulas desta dsciplina, um para cada linha do arquivo _sites.txt_. Faça um script que faz o download destes slides automaticamente, a partir do arquivo _sites.txt_. (DICA: use o comando wget.)
 
-```{bash}
+```bash
 #!/bin/bash
 filename='sites.txt'
 n=1
@@ -70,17 +70,13 @@ done < $filename
 
 5. Faça um script chamado _up.sh_ que sobe _N_ níveis na pasta onde você estiver, usando $1 como parâmetro de entrada. Por exemplo, se você estiver em **/home/aluno/Documents** e executar **./up.sh 2**, você automaticamente vai para a pasta **/home**.
 
+Usa o ponto antes de executar o código . ./up.sh , caso contrário não funcionará
 
-```{bash}
+```bash
 #!/bin/bash
-echo $# argumentos passados
-if [ $# -ge 1 ]; then
-  j=$#
-  while [[ j -gt 0 ]]; do
-    cd ..
-    j="$((j - 1))"
-  done
-fi
-
+echo $1 argumento1
+for i in $(seq $1); do
+  cd ..
+done
 
 ```
